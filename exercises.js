@@ -105,15 +105,15 @@ console.log (plainBox);
     console.log the object
 */
 
-// var stockCar = {
-//     model: 'Ford',
-//     year: 2012,
-//     automaticTransmission: true,
-//     driver: null,
-//     passengers: []
-// }
+var stockCar = {
+    model: 'Ford',
+    year: 2012,
+    automaticTransmission: true,
+    driver: null,
+    passengers: []
+}
 
-// console.log(stockCar);
+console.log(stockCar);
 /*
 
 6. Add new property inside a function
@@ -343,7 +343,17 @@ console.log(plainBoxResult);
     Invoke your function and pass in your stockCar object, store the result to a variable named isAutomaticTransmission and use `console.log` to inspect your results.
  */
 
+function detectingTransmission (object){
+    if (object.automaticTransmission===true){
+        return 'This car has an automatic transmission';
+    }else{
+        return 'This car has a manual transmission';
+    }
+}
 
+var isAutomaticTransmission = detectingTransmission(stockCar);
+
+console.log(isAutomaticTransmission);
 /*
 12.  Who's driving this thing?!
      As you may have noticed that the `stockCar` doesn't have a driver!
