@@ -86,13 +86,13 @@ Objects in Javascript can be compared to objects in real life. Objects has a col
   console.log the object
 */
 
-// var plainBox= {};
+var plainBox= {};
 
-// plainBox.color = 'brown';
-// plainBox.size = 14;
-// plainBox.contents = [];
+plainBox.color = 'brown';
+plainBox.size = 14;
+plainBox.contents = [];
 
-// console.log (plainBox);
+console.log (plainBox);
 
 /*
 5. Declare a variable named `stockCar` and create the following properties (key-value pairs) to the object:
@@ -105,15 +105,15 @@ Objects in Javascript can be compared to objects in real life. Objects has a col
     console.log the object
 */
 
-var stockCar = {
-    model: 'Ford',
-    year: 2012,
-    automaticTransmission: true,
-    driver: null,
-    passengers: []
-}
+// var stockCar = {
+//     model: 'Ford',
+//     year: 2012,
+//     automaticTransmission: true,
+//     driver: null,
+//     passengers: []
+// }
 
-console.log(stockCar);
+// console.log(stockCar);
 /*
 
 6. Add new property inside a function
@@ -131,19 +131,19 @@ console.log(stockCar);
    the value at `name`, and just the value at `age`.
  */
 
-var plainPerson = {};
+// var plainPerson = {};
 
-function buildPerson (person, nameString, age){
-    person.name = nameString;
-    person.age = age;
-    return person
-}
+// function buildPerson (person, nameString, age){
+//     person.name = nameString;
+//     person.age = age;
+//     return person
+// }
 
-var completePerson = buildPerson (plainPerson,'Thomas Edison', 172);
+// var completePerson = buildPerson (plainPerson,'Thomas Edison', 172);
 
-console.log(completePerson);
-console.log(completePerson.name);
-console.log(completePerson.age);
+// console.log(completePerson);
+// console.log(completePerson.name);
+// console.log(completePerson.age);
 /*
 7. Display values of objects that are inside an array
    Declare a new variable named `arrayOfObjects` and set it to be [this array of objects
@@ -169,6 +169,79 @@ console.log(completePerson.age);
             ...
  */
 
+//  var arrayOfObjects = [
+//     {
+//       id: 0,
+//       date: "Monday Jan 25 2015 2:01 PM",
+//       total: "279.38"
+//     },
+//     {
+//       id: 1,
+//       date: "Monday Jan 27 2015 11:31 AM",
+//       total: "79.80"
+//     },
+//     {
+//       id: 2,
+//       date: "Monday Feb 1 2015 7:56 AM",
+//       total: "15.62"
+//     },
+//     {
+//       id: 3,
+//       date: "Monday Feb 1 2015 9:43 AM",
+//       total: "19.83"
+//     },
+//     {
+//       id: 4,
+//       date: "Monday Feb 1 2015 11:08 PM",
+//       total: "56.69"
+//     },
+//     {
+//       id: 5,
+//       date: "Monday Feb 13 2015 10:22 AM",
+//       total: "137.92"
+//     },
+//     {
+//       id: 6,
+//       date: "Monday Feb 14 2015 6:54 PM",
+//       total: "938.65"
+//     },
+//     {
+//       id: 7,
+//       date: "Monday Feb 14 2015 7:17 PM",
+//       total: "43.77"
+//     },
+//     {
+//       id: 8,
+//       date: "Monday Feb 14 2015 7:18 PM",
+//       total: "28.54"
+//     },
+//     {
+//       id: 9,
+//       date: "Monday Feb 14 2015 7:18 PM",
+//       total: "194.33"
+//     }
+//   ];
+
+//   function printOrders (orders){
+//     array = [];
+//     for (i=0;i<orders.length;i++){  
+//         array.push('====='+"\n");
+//         array.push('id: ' + orders[i].id+"\n");
+//         array.push('purchase date: ' + orders[i].date+"\n");
+//         array.push('purchase total: ' + orders[i].total+"\n");
+//         //   console.log('=====');
+//         //   console.log('id: ' + orders[i].id);
+//         //   console.log('purchase date: ' + orders[i].date);
+//         //   console.log('purchase total: ' + orders[i].total);
+//       }return array.join('');
+//   }
+
+//   console.log(printOrders(arrayOfObjects));
+
+//   =====
+//             id:  0
+//             purchase date:  Monday Jan 25 2015 2:01 PM
+//             purchase total:  279.38
 
 /*
 8. Addition with an object
@@ -183,7 +256,38 @@ console.log(completePerson.age);
         to inspect your results.
 */
 
+var sumObj = [
+    {
+        a:1,
+        b:23,
+        result:undefined
+    },
+    {
+        a:2,
+        b: 45,
+        result:undefined
+    },
+    {
+        a:6,
+        b: 15,
+        result:undefined
+    },
+    {
+        a:19,
+        b:2005,
+        result:undefined
+    }
+];
 
+function objectAddition (object){
+    for (i=0;i<object.length; i++){
+        object[i].result = object[i].a+object[i].b;
+    }return object;
+}
+
+var sumObjResult = objectAddition(sumObj);
+
+console.log(sumObjResult);
 /*
 9. Print sum function and add as new key-value
    Declare a new function named printObj and a single parameter which will be the object from the challenge just above. 
@@ -201,7 +305,13 @@ console.log(completePerson.age);
         **create more** objects and invoke your function multiple times.
  */
 
+function printObj (object){
+    for (i=0;i<object.length;i++){
+        object[i].output = object[i].a + " + " + object[i].b + " = " + object[i].result;
+    }return object;
+}
 
+console.log(printObj(sumObj));
 /*
 10. Putting stuff in `plainBox`
         Declare a function named putInPlainBox and a single parameter which will be an object. Within this function, write a 
@@ -212,6 +322,15 @@ console.log(completePerson.age);
         plainBoxResult and use `console.log` to inspect your results.
  */
 
+function putInPlainBox (object){
+    for (i=0;i<11;i++){
+        plainBox.contents.push(Math.floor((Math.random()*100)+1));
+    }return object;
+}
+
+var plainBoxResult = putInPlainBox(plainBox);
+
+console.log(plainBoxResult);
 
 /*
 11. Detecting transmission
