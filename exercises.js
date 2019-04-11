@@ -14,14 +14,14 @@ Objects in Javascript can be compared to objects in real life. Objects has a col
     Console.log the object.
 */
  
-var books = {
-    title: 'The Obstacle is the Way',
-    author: 'Ryan Holiday',
-    category: 'Self Help',
-    pages: 200
-}
+// var books = {
+//     title: 'The Obstacle is the Way',
+//     author: 'Ryan Holiday',
+//     category: 'Self Help',
+//     pages: 200
+// }
   
-console.log(books);
+// console.log(books);
 
 /*
 2.  Declare a variable named `dog` and create the following properties (key-value pairs) to the object:
@@ -38,16 +38,16 @@ console.log(books);
  "My dog `name` is `age` year old and likes to `speak` at strangers."
 */ 
 
-var dog = {
-    name: 'Hercules',
-    age: 20,
-    vegetarian: false,
-    color: 'golden brown',
-    speak: function (){
-        return 'bark!';
-    }
-}
-console.log('My dog ' + dog.name + ' is ' + dog.age + ' years old and likes to ' + dog.speak() + ' at strangers.');
+// var dog = {
+//     name: 'Hercules',
+//     age: 20,
+//     vegetarian: false,
+//     color: 'golden brown',
+//     speak: function (){
+//         return 'bark!';
+//     }
+// }
+// console.log('My dog ' + dog.name + ' is ' + dog.age + ' years old and likes to ' + dog.speak() + ' at strangers.');
 
 //An empty object
 
@@ -64,7 +64,17 @@ console.log('My dog ' + dog.name + ' is ' + dog.age + ' years old and likes to '
   Console.log the object.
 */
 
+var kicks = {};
 
+kicks.brand = 'Aldo';
+kicks.color= 'cornflower blue';
+kicks.size = 9.5;
+kicks.price = 80.00;
+kicks.buy = function (){
+    return 'Now I is a cool kid!';
+}
+
+console.log(kicks.buy());
 /* 
 
 4. Declare a variable named `plainBox` and set its value to be an EMPTY object.
