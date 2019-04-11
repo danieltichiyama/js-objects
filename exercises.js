@@ -64,17 +64,17 @@ Objects in Javascript can be compared to objects in real life. Objects has a col
   Console.log the object.
 */
 
-var kicks = {};
+// var kicks = {};
 
-kicks.brand = 'Aldo';
-kicks.color= 'cornflower blue';
-kicks.size = 9.5;
-kicks.price = 80.00;
-kicks.buy = function (){
-    return 'Now I is a cool kid!';
-}
+// kicks.brand = 'Aldo';
+// kicks.color= 'cornflower blue';
+// kicks.size = 9.5;
+// kicks.price = 80.00;
+// kicks.buy = function (){
+//     return 'Now I is a cool kid!';
+// }
 
-console.log(kicks.buy());
+// console.log(kicks.buy());
 /* 
 
 4. Declare a variable named `plainBox` and set its value to be an EMPTY object.
@@ -86,6 +86,13 @@ console.log(kicks.buy());
   console.log the object
 */
 
+var plainBox= {};
+
+plainBox.color = 'brown';
+plainBox.size = 14;
+plainBox.contents = [];
+
+console.log (plainBox);
 
 /*
 5. Declare a variable named `stockCar` and create the following properties (key-value pairs) to the object:
@@ -98,7 +105,15 @@ console.log(kicks.buy());
     console.log the object
 */
 
+var stockCar = {
+    model: 'Ford',
+    year: 2012,
+    automaticTransmission: true,
+    driver: null,
+    passengers: []
+}
 
+console.log(stockCar);
 /*
 
 6. Add new property inside a function
