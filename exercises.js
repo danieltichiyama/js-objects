@@ -86,13 +86,13 @@ Objects in Javascript can be compared to objects in real life. Objects has a col
   console.log the object
 */
 
-var plainBox= {};
+// var plainBox= {};
 
-plainBox.color = 'brown';
-plainBox.size = 14;
-plainBox.contents = [];
+// plainBox.color = 'brown';
+// plainBox.size = 14;
+// plainBox.contents = [];
 
-console.log (plainBox);
+// console.log (plainBox);
 
 /*
 5. Declare a variable named `stockCar` and create the following properties (key-value pairs) to the object:
@@ -131,7 +131,19 @@ console.log(stockCar);
    the value at `name`, and just the value at `age`.
  */
 
+var plainPerson = {};
 
+function buildPerson (person, nameString, age){
+    person.name = nameString;
+    person.age = age;
+    return person
+}
+
+var completePerson = buildPerson (plainPerson,'Thomas Edison', 172);
+
+console.log(completePerson);
+console.log(completePerson.name);
+console.log(completePerson.age);
 /*
 7. Display values of objects that are inside an array
    Declare a new variable named `arrayOfObjects` and set it to be [this array of objects
